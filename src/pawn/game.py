@@ -1,6 +1,6 @@
 from pawn.player import Player
 
-class Game():
+class Game(object):
     player_class = Player
     supported_number_of_players = [2, 4]
 
