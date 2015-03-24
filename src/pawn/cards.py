@@ -25,5 +25,5 @@ class Deck(object):
     ranks = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K']
 
     def __init__(self):
-        self.cards = [Card(suit, rank) for suit, rank
+        self.cards = [self.card_class(suit, rank) for suit, rank
                       in itertools.product(self.suits, self.ranks)]

@@ -24,3 +24,15 @@ def test_bad_card(suit, rank):
 def test_deck():
     deck = Deck()
     assert len(deck.cards) == 52
+
+def test_deck_card_class():
+
+    class TestCard(Card):
+        pass
+
+    class TestDeck(Deck):
+        card_class = TestCard
+
+    deck = TestDeck()
+    assert type(deck.cards[0]) == TestCard
+

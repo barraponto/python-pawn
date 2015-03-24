@@ -18,6 +18,18 @@ def test_player_name(name):
     assert player.name == name
     assert repr(player) == "Player(name={name!r})".format(name=name)
 
+def test_game_player_class():
+
+    class TestPlayer(Player):
+        pass
+
+    class TestGame(Game):
+        player_class = TestPlayer
+
+    game = TestGame()
+    assert type(game.players[0]) == TestPlayer
+
+
 def test_main():
     from pawn.__main__ import main
     assert main([]) == 0
