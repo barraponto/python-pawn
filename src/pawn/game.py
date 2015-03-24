@@ -2,6 +2,11 @@ from pawn.player import Player
 
 
 class Game(object):
+    """Creates an N-players game.
+
+    :param number_of_players: the number of players for the current game.
+    """
+
     player_class = Player
     supported_number_of_players = [2, 4]
 
