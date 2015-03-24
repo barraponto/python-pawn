@@ -21,4 +21,4 @@ class Game(object):
 
     def __repr__(self):
         return 'Game(number_of_players={number!r})'.format(
-            number=self.number_of_players)
+            number=len(self.players))
